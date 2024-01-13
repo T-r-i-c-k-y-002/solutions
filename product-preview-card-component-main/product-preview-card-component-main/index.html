@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://kit.fontawesome.com/ab8d547756.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Montserrat:wght@300;400&family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-color: rgba(252, 235, 235, 0.807);
+    }
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 200;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: gray;
+    }
+    .content > #paragraph {
+      font-size: 28px;
+      line-height: 27px;
+      font-family: 'Fraunces', serif;
+      /*font-family: 'Poppins', sans-serif;*/
+    }
+    .box {
+      width: 695px;
+      height: 70vh;
+      margin: 200px 465px 100px;
+      display: flex;
+      border-radius: 8px;
+      background-color: rgb(255, 255, 255);
+    }
+    .image {
+      height: 100%;
+      width: 45%;
+      position: sticky;
+    }
+    .image img {
+      width: 100%; /* Make the image take the full width of the box */
+      height: 100%; /* Make the image take the full height of the box */
+      object-fit: cover; /* Cover the box while maintaining aspect ratio */
+    }
+    .content{
+      height: 100%;
+      width: 55%;
+      position: sticky;
+      margin: 40px 30px 30px;
+    }
+
+    .text-sm {
+      line-height: 1.35rem;
+      font-size: 0.875rem;
+    }
+    .font-montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .content > h2 {
+      margin: 0px 10px;
+    }
+    .price {
+      justify-content: space-between;
+      display: flex;
+    }
+    .price > #secondary {
+      font-size: 25px;
+      color: gray ;
+      margin-right: 85px;
+      margin-top: 8px;
+    }
+    .price > #main {
+      font-size: 35px;
+      font-weight: 700;
+      font-family: 'Fraunces', serif;
+      color: rgb(64, 135, 64);
+    }
+    button {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: rgb(64, 135, 64);
+      padding: 15px;
+      margin: 70px 20px 40px 10px;
+      outline: none;
+      border: none;
+    }
+    button:hover {
+      background-color: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="image">
+        <img src="./images/image-product-desktop.jpg" alt="image" width="300" height="400" style="border-radius: 5px;">
+      </div>
+      <div class="content">
+        <h3><b>perfume</b></h3>
+        <p id="paragraph"><b>Gabrielle Essence Eau De Parfum</b></p>
+        <p class="font-montserrat md:mt-6 mt-4 cap text-custom-grey text-sm">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.</p>
+        <br>
+        <div class="price">
+          <span id="main">$149.99</span>
+          <span id="secondary"><del>$169.99</del></span>
+        </div>
+        <button type="button" style="border-radius: 6px;font-size: 20px;color: #fff;"><b>🛒 Add To Cart</b></button>
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const para = document.querySelector('.text-sm');
+    para.style.color = "gray";
+  </script>
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
+</body>
+</html>
+
+<!--Perfume
+
+Gabrielle Essence Eau De Parfum
+
+A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+Perfumer-Creator for the House of CHANEL.
+
+$149.99
+$169.99
+
+Add to Cart-->
