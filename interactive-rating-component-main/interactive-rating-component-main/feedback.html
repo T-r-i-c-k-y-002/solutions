@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const storedRating = localStorage.getItem('userRating');
+    
+    if (storedRating) {
+        const ratingElement = document.getElementById('rating');
+        ratingElement.innerHTML = `<h4 style="color: #fb7413;justify-content: center;align-items: center;display: flex;font-family: 'Overpass', sans-serif;font-size: 1.0rem;background-color: #232f3f;margin: 0px 125px;border-radius: 20px;padding: 5px;">You selected ${storedRating} out of 5</h4>`;
+    }
+
+    localStorage.removeItem('userRating');
+});
+
+  </script>
+</head>
+<body>
+  <div class="container">
+      <div id="thankIMG">
+        <img src="./images/illustration-thank-you.svg" alt="star">
+      </div>
+      <div class="reviewbox">
+        <div id="rating">
+            <h4 style="color: #fb7413;justify-content: center;align-items: center;display: flex;font-family: 'Overpass', sans-serif;font-size: 1.0rem;background-color: #232f3f;margin: 0px 125px;border-radius: 20px;padding: 5px;">You selected  out of 5</h4>
+        </div> 
+        <h2 style="color: #fff;font-weight: 775;justify-content: center;align-items: center;display: flex;margin: 14px 0px 2px;">Thank you!</h2>
+      </div>
+      <div class="appreciate">
+        <p>We appreciate you taking the time to give a rating.
+           If you ever need more support, 
+          don't hesitate to <span>get in touch!</span></p>
+      </div>  
+  </div>
+
+  <script src="./script.js"></script>
+ <!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+ --> 
+</body>
+</html>
