@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Thank You</title>
+
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const getEmail = document.getElementById('getEmail');
+            const email = localStorage.getItem("emailEntered");
+            if(email) {
+                getEmail.textContent = email;
+            }
+            localStorage.removeItem("emailEntered");
+        });
+
+        document.getElementById("back").addEventListener("click", () => {
+            // Go back to the previous page
+            window.history.back();
+        });
+    </script>
+
+</head>
+<body>
+    <div class="box">
+        <div id="tick">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+        </div>
+        <div>
+            <h2>Thanks For Subscribing!</h2>
+        </div>
+        <div>
+        <p id="getting">A confirmation email has been sent to <span id="getEmail"></span>
+                Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+    <button id="back">Dismiss Message</button>
+
+    </div>
+
+
+    <script src="./script_thanks.js"></script>
+</body>
+</html>
