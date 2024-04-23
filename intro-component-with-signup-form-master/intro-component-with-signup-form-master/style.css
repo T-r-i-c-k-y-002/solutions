@@ -1,0 +1,119 @@
+* {
+     inset: 0;
+}
+
+body {
+    background-color: #ff7a7a;
+    font-family: "Poppins", sans-serif;
+}
+
+.WholePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 55px;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.left {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;
+    color: #fff;
+}
+
+.left > h1 {
+    padding-right: 145px;
+    font-weight: 800;
+    margin-top: 90px;
+}
+
+.right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    min-height: 65vh;
+
+}
+
+.right > .price {
+    background-color: #6055a5;
+    width: 90%;
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 29px;
+    color: #fff;
+    box-shadow: 0 5px rgb(0,0,0,0.3);
+    min-height: 4vh;
+}
+
+.price > p {
+    padding-top: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    border-radius: 8px;
+    margin-top: 25px;
+    filter: drop-shadow(5px 5px 8px rgb(0,0,0,0.25));
+    min-height: 52vh;
+    margin-left: 30px;
+}
+
+form input {
+    width: 80%;
+    margin-left: 50px;
+    border-radius: 9px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+form button {
+    width: 84%;
+    margin-left: 50px;
+    background-color: #38cc8c;
+    padding: 10px;
+    text-transform: uppercase;
+    outline: none;
+    color: #fff;
+    border: none;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border-bottom: 5px solid #17b26f;
+}
+
+form span {
+    text-align: end;
+    margin-right: 80px;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: #60cf9f;
+}
+
+form >#firstname {
+    margin-top: 25px;
+    font-weight: 700;
+}
+form >#lastname {
+    margin-top: 25px;
+    font-weight: 700;
+}
+form >#email {
+    margin-top: 25px;
+    font-weight: 700;
+}
+form >#password {
+    margin-top: 25px;
+    font-weight: 700;
+}
+
